@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+            color: white;
+        }
+
+        .navbar {
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn-play {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-more {
+            background-color: rgba(109, 109, 110, 0.7);
+            color: white;
+        }
+
+        .movies-row {
+            padding: 20px 50px;
+        }
+
+        .row-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .movie-card {
+            position: relative;
+            transition: transform 0.3s;
+            aspect-ratio: 16/9;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .movies-row {
+                padding: 20px;
+            }
+
+            .movies-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NETFLIX</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+            <a href="#">My List</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Stranger Things</h1>
+            <p class="hero-description">
+                When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+            </p>
+            <button class="btn btn-play">▶ Play</button>
+            <button class="btn btn-more">ⓘ More Info</button>
+        </div>
+    </div>
+
+    <div class="movies-row">
+        <h2 class="row-title">Trending Now</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 1">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 2">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 3">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 4">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 5">
+            </div>
+        </div>
+    </div>
+
+    <div class="movies-row">
+        <h2 class="row-title">Popular on Netflix</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 6">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 7">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 8">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 9">
+            </div>
+            <div class="movie-card">
+                <img src="/api/placeholder/300/169" alt="Movie 10">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
